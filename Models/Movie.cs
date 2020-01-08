@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace RazorPagesMovies.Models {
+namespace RazorPagesMovie.Models {
     public class Movie {
         // primary ID
         public int ID { get; set; }
