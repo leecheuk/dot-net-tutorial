@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RazorPagesMovie.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 
 namespace webAppTutorial
 {
@@ -59,6 +60,12 @@ namespace webAppTutorial
             {
                 endpoints.MapRazorPages();
             });
+
+            app.UseSpa(spa => {
+                spa.Options.SourcePath = "./ClientApp";
+                spa.UseAngularCliServer("start");
+            });
+
         }
     }
 }
