@@ -13,9 +13,10 @@ namespace webAppTutorial.Controllers
         }
 
         // GET; /api/Welcome
-        public string Welcome() 
+        public string Welcome(string name, int numTimes = 1) 
         {
-            return "Welcome to api world";
+            // add query string
+            return HtmlEncoder.Default.Encode($"Hello {name}, welcome to api world! NumTimes is: {numTimes}");
         }
     }
 }

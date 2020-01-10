@@ -27,6 +27,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Movies/Index">Movies</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" 
+                                asp-controller="api" 
+                                asp-action="Welcome"
+                                asp-route-name="james"
+                                asp-route-numTimes=3
+                                >Api</a>
+                        </li>
                     </ul>
                 </div>
             </div>
